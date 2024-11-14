@@ -12,7 +12,7 @@ class Logged_in_toast:
             logged_in_toast = driver_class.driver.find_element(By.CSS_SELECTOR,'#notistack-snackbar > .MuiTypography-root').text
             # print(logged_in_toast)
 
-            if 'Applicant logged in' in logged_in_toast:
+            if 'Login successful' in logged_in_toast:
                 print("The toast message is present")
             else:
                 print("Nothing found, failed")

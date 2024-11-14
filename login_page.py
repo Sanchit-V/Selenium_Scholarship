@@ -14,7 +14,7 @@ class login_page():
 
         if language==1:
             driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="li-en-US-language"]').click()
-            time.sleep(3)
+            time.sleep(2)
             driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-login-access-code"]').send_keys(pass_key)
             driver_class.driver.find_element(By.CSS_SELECTOR,'[data-test-id="btn-handle-acess-code-visibility-login"]').click()
             driver_class.driver.find_element(By.CSS_SELECTOR,'[data-test-id="btn-submit-login"]').click()
@@ -24,6 +24,7 @@ class login_page():
 
         else:
             driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="li-es-ES-language"]').click()
+            time.sleep(2)
             driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-login-access-code"]').send_keys(pass_key)
             driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-handle-acess-code-visibility-login"]').click()
             driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-submit-login"]').click()
