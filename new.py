@@ -9,7 +9,7 @@ import time
 class driver_class:
     driver = webdriver.Chrome()
     wait = WebDriverWait(driver, 10)
-    pass_key = 'e9a7e5f'
+    pass_key = 'af3e9a7'
     language = 1 #put 1 for english and 0 for spanish
     date = '02/12/2022'
     country ='India'

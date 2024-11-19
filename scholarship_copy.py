@@ -18,7 +18,9 @@ from client_contact import Email, default_email, def_Phone_number, def_Whatsapp_
     additional_whatsapp, country_code, address_nationality, Housing_type, enter_phone_number, Housing_conditions, \
     Zip_code, home_Address
 from TnC import Terms_and_Conditions
+from logout_username import Logout_username
 language=driver_class.language
+
 
 
 
@@ -41,6 +43,10 @@ def test_login_toast():
 def test_get_started_button():
     driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-get-started-welcome"]').click()
     time.sleep(2)
+
+#def test_account_details_with_logout():
+    #Logout_username()
+
 def test_Personal_Details():
     personal_details()
 def test_Birth_Details():
@@ -136,6 +142,13 @@ def test_form_submitted():
     print('*****************************************\t')
 
     time.sleep(2)
+
+
+#def test_cancel_functionality():
+    #driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-cancel-address"]').click()
+
+#def test_back_button():
+    #driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-back-address"]').click()
 
 
 
