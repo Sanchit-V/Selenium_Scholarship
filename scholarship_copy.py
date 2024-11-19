@@ -19,6 +19,10 @@ from client_contact import Email, default_email, def_Phone_number, def_Whatsapp_
     Zip_code, home_Address
 from TnC import Terms_and_Conditions
 from logout_username import Logout_username
+from cancel_button import Cancel_button_Personal, Cancel_button_Address, Cancel_button_Additional, Accept_Cancel, \
+    Decline_Cancel
+from back_button import Back_Button_Address, Back_Button_Additional
+
 language=driver_class.language
 
 
@@ -47,6 +51,17 @@ def test_get_started_button():
 #def test_account_details_with_logout():
     #Logout_username()
 
+
+
+
+
+
+
+
+#def test_back_button():
+    #driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-back-address"]').click()
+
+
 def test_Personal_Details():
     personal_details()
 def test_Birth_Details():
@@ -59,6 +74,17 @@ def test_City():
     city()
 def test_Nationality():
     nationality()
+    time.sleep(4)
+
+def test_cancel_functionality_personal():
+    Cancel_button_Personal()
+    time.sleep(2)
+    # Cancel_button_Address()
+    # Cancel_button_Additional()
+    #Accept_Cancel()
+    time.sleep(2)
+    Decline_Cancel()
+
 def test_Income_Expense():
     income_expense()
 def test_Financially_Independent():
@@ -71,6 +97,11 @@ def test_Personal_Details_Continue_Button():
 def test_default_Email():
     default_email()
 
+time.sleep(3)
+
+#def test_back_button_address():
+    #Back_Button_Address()
+
 def test_add_Email():
     Email()
     time.sleep(2)
@@ -80,6 +111,17 @@ def test_Phone_number_def():
 
 def test_Whatsapp_number_def():
     def_Whatsapp_number()
+
+
+
+def test_cancel_functionality_address():
+    #Cancel_button_Personal()
+    Cancel_button_Address()
+    time.sleep(2)
+    # Cancel_button_Additional()
+    #Accept_Cancel()
+    time.sleep(2)
+    Decline_Cancel()
 
 def test_additional_phone():
     additional_contact()
@@ -112,8 +154,22 @@ def test_continue_button_2():
     driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-continue-address"]').click()
     time.sleep(4)
 
+def test_additional_back_button():
+    Back_Button_Additional()
+
+def test_cancel_functionality_additional():
+    # Cancel_button_Personal()
+    # Cancel_button_Address()
+    Cancel_button_Additional()
+    time.sleep(2)
+    #Accept_Cancel()
+    time.sleep(2)
+    Decline_Cancel()
+
 def test_additional_info_page():
     add_info()
+
+
 
 def test_finalize_button():
     driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-continue-additional"]').click()
@@ -144,11 +200,7 @@ def test_form_submitted():
     time.sleep(2)
 
 
-#def test_cancel_functionality():
-    #driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-cancel-address"]').click()
 
-#def test_back_button():
-    #driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-back-address"]').click()
 
 
 
