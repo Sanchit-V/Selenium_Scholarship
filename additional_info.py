@@ -31,12 +31,15 @@ class add_info:
 
         time.sleep(2)
 
-        driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-additional-information-referral-details"]').click()
-        driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-additional-information-referral-details"]').send_keys('In the end, Alex and Casey outsmarted Dr. Eveline and returned to New York as heroes, their friendship stronger than ever.')
+        #driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-additional-information-referral-details"]').click()
+        #driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-additional-information-referral-details"]').send_keys('In the end, Alex and Casey outsmarted Dr. Eveline and returned to New York as heroes, their friendship stronger than ever.')
 
         try:
             text_field= driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-additional-information-referral-details"]')
-            print('Web element found')
+            print('\t')
+            print('*****************************************\t')
+            print('Web element found\t')
+            print('*****************************************')
             text_field.click()
             text_field.send_keys('In the end, Alex and Casey outsmarted Dr. Eveline and returned to New York as heroes, their friendship stronger than ever.')
 

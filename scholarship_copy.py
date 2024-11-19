@@ -17,7 +17,7 @@ from children_details import has_children
 from client_contact import Email, default_email, def_Phone_number, def_Whatsapp_number, additional_contact, \
     additional_whatsapp, country_code, address_nationality, Housing_type, enter_phone_number, Housing_conditions, \
     Zip_code, home_Address
-
+from TnC import Terms_and_Conditions
 language=driver_class.language
 
 
@@ -115,19 +115,25 @@ def test_finalize_button():
     time.sleep(7)
 
 def test_check_button_tnc():
-    driver.find_element(By.XPATH, "//input[@type='checkbox']").click()
+
+    Terms_and_Conditions()
+
     driver.find_element(By.CSS_SELECTOR, '[data-test-id="btn-send-summary"]').click()
 
     time.sleep(5)
 
 def test_form_submitted():
     submitted_message=driver.find_element(By.CSS_SELECTOR, '[data-test-id="text-submitted-title"]').text
-
+    print('\t')
+    print('*****************************************\t')
     if 'Form Submission Successful' in submitted_message:
         print('Form Submitted')
 
     else:
         'No submission.'
+
+
+    print('*****************************************\t')
 
     time.sleep(2)
 

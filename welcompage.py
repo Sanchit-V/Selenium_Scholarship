@@ -8,6 +8,8 @@ language=driver_class.language
 
 class Logged_in_toast:
     def __init__(self):
+        print('\t')
+        print('*****************************************\t')
         if language==1:
             logged_in_toast = driver_class.driver.find_element(By.CSS_SELECTOR,'#notistack-snackbar > .MuiTypography-root').text
             # print(logged_in_toast)
@@ -26,10 +28,13 @@ class Logged_in_toast:
             else:
                 print("Nothing found, failed")
 
+        print('*****************************************')
 
 
 class welcomepage():
     def __init__(self):
+        print('\t')
+        print('*****************************************\t')
         if language == 1:
             welcome_message = driver_class.driver.find_element(By.CSS_SELECTOR,'[data-test-id="text-welcome-message"]').text
 
@@ -45,6 +50,8 @@ class welcomepage():
                 print("Passed, Welcome message present")
             else:
                 print("Failed, No welcome message found.")
+
+        print('*****************************************')
 
 
 

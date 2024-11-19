@@ -29,11 +29,16 @@ print(email_Ids)
 class default_email:
     def __init__(self):
         default=driver_class.driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-address-contact-default-email"]')
-
+        print('\t')
+        print('*****************************************\t')
         if presence_of_element_located(default):
-            print("Default email is present.")
+            print("Default email is present.\t")
         else:
-            print("Error")
+            print("Error\t")
+
+        email_extracted=driver.find_element(By.CSS_SELECTOR, '[data-test-id="input-address-contact-default-email"]').get_attribute('value')
+        print(email_extracted+ '\t')
+        print('*****************************************\t')
 
 
 
@@ -302,20 +307,24 @@ class address_nationality:
         try :
             home_State = driver.find_element(By.CSS_SELECTOR,'[data-test-id="autocomplete-input-addresses-residence-state"]')
             home_State.click()
-            print('Web Element found')
+            print('\t')
+            print('***************************************\t')
+            print('Web Element found for home state.')
             home_State.send_keys(driver_class.Home_State)
             home_State.send_keys(Keys.ARROW_DOWN)
             home_State.send_keys(Keys.ENTER)
         except:
             print('No State')
 
-
+        print('***************************************\t')
         time.sleep(2)
 
         try:
             home_City = driver.find_element(By.CSS_SELECTOR,'[data-test-id="autocomplete-input-addresses-residence-city"]')
             home_City.click()
-            print('Web Element found')
+            print('Web Element found for home city.\t')
+            print('***************************************\t')
+
             home_City.send_keys(driver_class.Home_city)
             home_City.send_keys(Keys.ARROW_DOWN)
             home_City.send_keys(Keys.ENTER)
